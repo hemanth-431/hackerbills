@@ -20,13 +20,19 @@ import org.springframework.web.bind.annotation.RestController;
 import tech.getarrays.employeemanager.service.EmployeeService;
 import tech.getarrays.employeemanager.model.Employee;
 @RestController
-@RequestMapping("")
+@RequestMapping("/")
 public class EmployeeResouce {
 	@Autowired
 private final EmployeeService employeeService;
 
 public EmployeeResouce(EmployeeService employeeService) {
 	this.employeeService=employeeService;
+}
+
+@GetMapping("/")
+public String hi(){
+	List<Employee> employees=employeeService.finadAllEmployees();
+	return "Welcome to INFINX";
 }
 
 @GetMapping("/bills")

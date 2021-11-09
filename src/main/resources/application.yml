@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://ec2-44-194-54-186.compute-1.amazonaws.com:5432/dagl1tg58uvb89
+    username: ojwegenrbckmzs
+    password: 5657720cdfbef50270cb174174d6d123d48c3ac5f6fc181dbd30da1a65fdf8c0
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL57Dialect
+server:
+  port: 9191
+  
+#  
+#  spring:
+#  datasource:
+#    url: jdbc:sqlserver://hacker-bill.database.windows.net:1433;database=HackerBill;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+#    username: hemanth
+#    password: BVH022208@gmail
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL57Dialect
+#server:
+#  port: 9191

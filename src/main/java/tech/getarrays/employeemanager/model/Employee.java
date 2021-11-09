@@ -7,18 +7,33 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
+@Table
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Employee implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(nullable=false,updatable=false)
+	@Column(nullable=false,updatable=false,name="BillId")
 private Long id;
+	
 private String BilledTo;
+@Column(name="BillDate") 
 private String date;
+@Column(name="BillPrice") 
 private String price;
+@Column(name="BillTax") 
 private String tax;
+@Column(name="BillTotal") 
 private String total;
+
 public Employee(Long id, String BilledTo, String date, String price, String tax, String total) {
 	super();
 	this.id = id;
